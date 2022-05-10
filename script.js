@@ -9,3 +9,4 @@ const cleanButtons = document.querySelectorAll('[data-clean]')
 const deleteButtons = document.querySelectorAll('[data-delete]')
 
 const currentOperand = document.querySelectorAll('[data-currend-operand]')
+
