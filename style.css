@@ -9,6 +9,18 @@
 
 /* *********** TAG *********** */
 
+*{
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold ;
+
+}
+
+body{
+    
+    background-color: #c9c1dd;
+}
 
 
 /* *********** alt *********** */
