@@ -10,3 +10,11 @@ const deleteButtons = document.querySelectorAll('[data-delete]')
 
 const currentOperand = document.querySelectorAll('[data-currend-operand]')
 
+const previousOperand = document.querySelectorAll('[data-previous-operand]')
+
+class Calculator{
+    constructor(){
+         
+
+    }
+}
