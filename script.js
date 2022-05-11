@@ -21,11 +21,14 @@ class Calculator {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
   }
-
   clear() {
     this.currentOperand = "";
     this.previousOperand = "";
     this.operation = undefined;
+  }
+  updateDisplay() {
+    this.previousOperandTextElement.innerText = this.previousOperand;
+    this.currentOperandTextElement.innerText = this.currentOperand;
   }
 }
 
@@ -34,4 +37,6 @@ const calculator = new Calculator(
   currentOperandTextElement
 );
 
-cleanButtons.addEventListener("click");
+cleanButtons.addEventListener("click", () => {
+  this.clear();
+});
