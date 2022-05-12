@@ -1,12 +1,12 @@
 const numberButtons = document.querySelectorAll("[data-number]");
 
-const operationButtons = document.querySelectorAll("[data-operation]");
+const operationButton = document.querySelectorAll("[data-operation]");
 
-const igualButtons = document.querySelectorAll("[data-igual]");
+const igualButton = document.querySelectorAll("[data-igual]");
 
-const cleanButtons = document.querySelectorAll("[data-clean]");
+const allCleanButton = document.querySelectorAll("[data-clean]");
 
-const deleteButtons = document.querySelectorAll("[data-delete]");
+const deleteButton = document.querySelectorAll("[data-delete]");
 
 const currentOperandTextElement = document.querySelectorAll(
   "[data-currend-operand]"
@@ -21,14 +21,16 @@ class Calculator {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
   }
+
+  updateDisplay() {
+    this.previousOperandTextElement.innerText = this.previousOperand;
+    this.currentOperandTextElement.innerText = this.currentOperand;
+  }
+
   clear() {
     this.currentOperand = "";
     this.previousOperand = "";
     this.operation = undefined;
-  }
-  updateDisplay() {
-    this.previousOperandTextElement.innerText = this.previousOperand;
-    this.currentOperandTextElement.innerText = this.currentOperand;
   }
 }
 
@@ -37,6 +39,7 @@ const calculator = new Calculator(
   currentOperandTextElement
 );
 
-cleanButtons.addEventListener("click", () => {
-  this.clear();
+allCleanButton.addEventListener("click", () => {
+  calculator.clear();
+  calculator.updateDisplay();
 });
